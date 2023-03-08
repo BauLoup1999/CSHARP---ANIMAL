@@ -1,7 +1,17 @@
-﻿Animal animal1 = new Animal();
-animal1.Move();
-animal1.Sleep();
+﻿using System;
 
-Animal animal2 = new Animal("cat");
-animal2.Move();
-animal2.Sleep();
+class Program
+{
+    static void Main(string[] args)
+    {
+        Griffin griffin = new Griffin("Griffux");
+        griffin.Move();
+        griffin.Sleep();
+
+        Dragon dragon = new Dragon("Graou le dragon");
+        dragon.Move();
+        dragon.Sleep();
+
+        Console.ReadLine();
+    }
+}
