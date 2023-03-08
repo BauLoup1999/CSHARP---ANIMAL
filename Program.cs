@@ -4,7 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Griffin griffin = new Griffin("Griffux");
+
+        List<Dog> dogs = new List<Dog>
+        {
+            new Dog { Name = "Snow" },
+            new Dog { Name = "Yanis" },
+            new Dog { Name = "Aziz" },
+            new Dog { Name = "Habibi" },
+            new Dog { Name = "Jul" }
+        };
+
+
+        var otherDogs = dogs.Where(d => d.Name != "Snow").Select(d => d.Name);
+
+        Console.WriteLine("Les autres chiens sont :");
+        foreach (var dogName in otherDogs)
+        {
+            Console.WriteLine(dogName);
+        }
+        Console.ReadLine();
+    
+
+
+
+    Griffin griffin = new Griffin("Griffux");
         griffin.Move();
         griffin.Sleep();
 
@@ -15,3 +38,4 @@ class Program
         Console.ReadLine();
     }
 }
+
