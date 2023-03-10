@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public abstract class Animal
 {
     public string Name { get; set; }
+    public int Age { get; set; }
 
     public Animal()
     {
         Name = "Habibis";
+        Age = 0;
     }
 
-    public Animal(string name)
+    public Animal(string name, int age)
     {
         Name = name;
+        Age = age;
     }
 
     public virtual void Move()
@@ -19,7 +24,7 @@ public abstract class Animal
         Console.WriteLine(Name + " ddaz");
     }
 
-public virtual void Sleep()
+    public virtual void Sleep()
     {
         Console.WriteLine(Name + " dort fort");
     }
@@ -32,7 +37,7 @@ public class Griffin : Animal
         Name = "Griffin";
     }
 
-    public Griffin(string name) : base(name)
+    public Griffin(string name, int age) : base(name, age)
     {
     }
 
@@ -44,9 +49,9 @@ public class Griffin : Animal
     {
         Console.WriteLine(Name + " Dort");
     }
-
-
 }
+
+
 
 public class Dragon : Animal, IPIlotage
 {
@@ -55,7 +60,7 @@ public class Dragon : Animal, IPIlotage
         Name = "Dragon";
     }
 
-    public Dragon(string name) : base(name)
+    public Dragon(string name, int age) : base(name, age)
     {
     }
 
@@ -68,4 +73,6 @@ public class Dragon : Animal, IPIlotage
     {
         Console.WriteLine(Name + " Dort fort aussi");
     }
+
+   
 }

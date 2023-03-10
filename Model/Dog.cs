@@ -1,6 +1,17 @@
 ﻿using System;
 
-class Dog
+
+public class Dog : Animal, IPIlotage
 {
-    public string Name { get; set; }
+    public Dog() : base()
+    {
+        Name = "Dog";
+    }
+
+    public Dog(string name, int age) : base(name, age)
+    {
+    }
+
+ 
+
 }
