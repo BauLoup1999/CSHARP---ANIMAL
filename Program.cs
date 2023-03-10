@@ -26,10 +26,17 @@ class Program
         Griffin griffin = new Griffin("Griffux", 3);
         griffin.Move();
         griffin.Sleep();
+        
 
         Dragon dragon = new Dragon("Graou le dragon", 7);
         dragon.Move();
         dragon.Sleep();
+
+        Eagle eagle = new Eagle("L'aigle de la hess", 8);
+        eagle.Fly();
+
+        Bird bird = new Bird("Le piaf", 4);
+        bird.Fly();
 
         List<Animal> animals = new List<Animal>();
         animals.Add(griffin);

@@ -28,6 +28,7 @@ public abstract class Animal
     {
         Console.WriteLine(Name + " dort fort");
     }
+ 
 }
 
 public class Griffin : Animal
