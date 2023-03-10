@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSHARP___ANIMAL.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -54,7 +55,7 @@ public class Griffin : Animal
 
 
 
-public class Dragon : Animal, IPIlotage
+public class Dragon : Animal, IPIlotage, IFly
 {
     public Dragon() : base()
     {
@@ -67,13 +68,17 @@ public class Dragon : Animal, IPIlotage
 
     public override void Move()
     {
-        Console.WriteLine(Name + " S'envole like a pure OG");
+        Console.WriteLine(Name + " bouge");
     }
 
     public new void Sleep()
     {
         Console.WriteLine(Name + " Dort fort aussi");
     }
+    public  void Fly()
+    {
+        Console.WriteLine(Name + " S'envole like a pure OG");
+    }
 
-   
+
 }

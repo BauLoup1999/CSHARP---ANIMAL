@@ -31,6 +31,7 @@ class Program
         Dragon dragon = new Dragon("Graou le dragon", 7);
         dragon.Move();
         dragon.Sleep();
+        dragon.Fly();
 
         Eagle eagle = new Eagle("L'aigle de la hess", 8);
         eagle.Fly();
